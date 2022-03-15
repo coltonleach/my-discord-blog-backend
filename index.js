@@ -159,6 +159,18 @@ setActiveChannel({
     date: "March 14, 2022",
     section: 'blog',
   },
+  {
+    id: 11,
+    title: "my first official fullstack application",
+    body: [
+      `I originally deployed the website with the frontend and backend together in a single repo using <code>app.use(express.static('build'))</code> but that became problematic.`,
+      `In the frontend, I have two routes: "/" and "/blog", which are handled with React Router. If you start from the root directory, everything is fine. But if you go to "/blog" then refresh, an error is thrown saying "Cannot GET /blog", because the backend intercepts the request. My solution was to simply host the front and backend separately, which works perfectly for now.`,
+      `My next milestone for this project is to add user authentication, and once that's done I'd like to implement a feature to create blog posts within the application, as opposed to manipulating the backend directly. However, I just ran into a problem with the deployed app as I was writing this article. Some times fetching the blog posts takes several seconds, which causes the screen to just be empty. I realize now that I should probably setup a either a loading animation, or just a message that explains what's happening.`,
+      
+    ],
+    date: "March 14, 2022",
+    section: 'blog',
+  },
 ]
 
 app.get('/api/articles', (req, res) => {
