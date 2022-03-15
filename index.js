@@ -3,7 +3,6 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors())
-app.use(express.static('build'))
 const requestLogger = (req, res, next) => {
   console.log('----REQUEST LOGGER----')
   console.log('Method: ', req.method)
