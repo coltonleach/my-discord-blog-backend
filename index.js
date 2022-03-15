@@ -1,5 +1,21 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
+
+app.use(cors())
+
+const requestLogger = (req, res, next) => {
+  console.log('----REQUEST LOGGER----')
+  console.log('Method: ', req.method)
+  console.log('Path: ', req.path)
+  console.log('Body: ', req.body)
+  console.log('-------')
+next()
+}
+
+app.use(requestLogger)
+
+app.use(express.json())
 
 const articles = [
   {
@@ -131,17 +147,26 @@ setActiveChannel({
     date: "January 28, 2022",
     section: 'blog',
   },
+  {
+    id: 10,
+    title: "setting up the backend",
+    body: [
+      `I started to setup a backend with Node.JS and Express on March 10th, got about 45 minutes into before I was cut short by having to go out of town and didn't have a way to work on it as I was gone. I have the routes working, but wasn't able to get the objects parsed correctly. But I got back home at 6pm, settled in at 7:30pm, and gonna try to finish it tonight`,
+      `I set up a simple request logger middleware that shows the method, path, and body the user requests, but for some reason it isn't working at all. At first I thought it was the way I had my useEffect hook setup and it wasn't even reaching the backend, but when I go to the URL directly through the browser, everything is showing up but the middleware isn't even working 😵.`,
+      `haha whoops, I put the call to the middleware after the route instead of before it 🤪.`,
+      `Well I figured out why I couldn't fetch anything from the backend. I had <code>http:localhost:3001/api/articles</code> instead of <code>http://localhost:3001/api/articles</code> 😬. But now I have a new problem that's pretty tough. I'm grabbing all the articles, I'm filtering out the "home" posts and the "blog" posts into their own variables inside the useEffect hook, but for some reason it's not re-rendering the DOM. It's 11:27pm now, so I'm gonna go to bed and pick it back up tomorrow.`,
+      `I lied about going to bed. Thankfully it isn't that late, it's only 11:56pm. I complained to a buddy of mine and he pointed out that I simply had some poor implementation, pointed me in the right direction and I got it all sorted out. So now I have a properly functioning, bare bones back-end. And <b>now</b> I'm going to bed. Have a great night, everyone 😴`
+    ],
+    date: "March 14, 2022",
+    section: 'blog',
+  },
 ]
-
-app.get('/', (req, res) => {
-  res.send('<h1>hello</h1>')
-})
 
 app.get('/api/articles', (req, res) => {
   res.json(articles)
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`listening to port ${PORT}`)
 })
