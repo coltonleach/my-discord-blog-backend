@@ -166,9 +166,9 @@ setActiveChannel({
       `I originally deployed the website with the frontend and backend together in a single repo using <code>app.use(express.static('build'))</code> but that became problematic.`,
       `In the frontend, I have two routes: "/" and "/blog", which are handled with React Router. If you start from the root directory, everything is fine. But if you go to "/blog" then refresh, an error is thrown saying "Cannot GET /blog", because the backend intercepts the request. My solution was to simply host the front and backend separately, which works perfectly for now.`,
       `My next milestone for this project is to add user authentication, and once that's done I'd like to implement a feature to create blog posts within the application, as opposed to manipulating the backend directly. However, I just ran into a problem with the deployed app as I was writing this article. Some times fetching the blog posts takes several seconds, which causes the screen to just be empty. I realize now that I should probably setup a either a loading animation, or just a message that explains what's happening.`,
-      
+      `I added a default message that explains to the user that the backend might take a bit of time, and I also added a tooltip for when you hover over the home or blog "server". I'm gonna try to focus on starting a new project, which will probably not be as complex as this one, but something cool and challenging. No idea what it will be, but I'll figure it out.`,
     ],
-    date: "March 14, 2022",
+    date: "March 15, 2022",
     section: 'blog',
   },
 ]
