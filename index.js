@@ -22,11 +22,10 @@ const articles = [
     title: 'welcome 👋',
     body: [
       `Howdy, welcome to my Discord themed website! My name’s Colton, and I created this site to learn ReactJS, and boy was it a trip. Everything here is made from scratch, the only thing I took from Discord (other than the inspiration) is the color palette. If you’d like to see my progress updates, click the blog “server” on the left hand side, and you’ll see all my entries since the start of this project.`,
-      `If you’d like to contact me for any reason, my email is <a class="hypertext" href="mailto:leach.colton@hotmail.com">leach.colton@hotmail.com</a>.<span class="edited"></span>`,
+      `If you’d like to contact me for any reason, my email is <a class="hypertext" href="mailto:leach.colton@hotmail.com">leach.colton@hotmail.com</a>. And if you would like to see any of my other projects (I recently created a weather app and am now working on a React Native app), here's my <a class="hypertext" href="https://github.com/coltonleach/">GitHub</a>, and here's my <a class="hypertext" href="https://codepen.io/issvor/">Codepen</a>.<span class="edited"></span>`,
       "A bit about me: I’m entirely self taught in web development, photoshop, video editing, and photography. I’ve been building computers since my teens, and playing video games since I was 4 years old. Back in 2006, I grew a soft spot for videography because of YouTube, and I would take my mom’s little point and shoot camera everywhere to record everything I did. Because of YouTube, I stumbled upon a community of 3D artists that used a combination of Photoshop, After Effects, and Cinema 4D, which resulted in me learning those programs to make YouTube backgrounds for my channel and for some friends. After I graduated high school, my mom gave me a hand-me-down Nikon DSLR, and I loved that little thing. Nearly everyday I’d walk around town taking pictures of whatever I thought was neat, and that eventually evolved into me getting brand new gear and doing a few photoshoots for family and friends. This was at the same time I truly started my software development journey.",
       "I started learning how to program when I was 12 years old, but never did anything more than learn how to use loops, then in college I took a Java class that didn’t teach me anything more than how to use loops. I transferred to a different college and the next programming class I had to take was data structures and algorithms, so I had a <b>lot</b> of catching up to do. Those were my only two programming classes, and I wasn’t really enjoying C++, so I decided to check out the web development side of things. A friend of mine showed me some stuff he did in React Native, and I was instantly hooked. I found some stuff from freeCodeCamp, wasn’t really getting it, then stumbled upon Bob Ziroll’s Scrimba course and dove head first in the deep end. After completing his course, I realized that my foundation was minuscule and would lead to problems down the road, so I decided to start from scratch. I focused primarily on HTML and CSS, watching a lot of Kevin Powell videos. I made a few small websites, then started learning how to design some stuff using Javascript and manipulating the DOM. After getting comfortable enough with that, I came back to React, and this was the first project I attempted.",
       "I think it turned out pretty well 😀",
-      `Here's my <a class="hypertext" href="https://github.com/coltonleach/">GitHub</a>, and here's my <a class="hypertext" href="https://codepen.io/issvor/">Codepen</a><span class="edited"></span>`
     ],
     date: 'October 24th, 2021',
     section: 'home',
@@ -92,18 +91,18 @@ const articles = [
       `Oh my lord I figured out my problem and fixed it! I knew I was over thinking it, but man this is embarrassing. <s>I don't know exactly how to explain the problem over text without showing the code, but I'll try my best.</s> I figured out how to add code snippets, so it's a bit easier to understand now 😁. <span class="edited"></span>`,
       `I have the blogs stored in state, and whenever I load the website, the blogs get filtered to their respective location and get passed down through props. So far so good. I have a function where when you click a channel, it updates a local state in the channels component and stores which channel is active. I have a useEffect hook that is supposed to set state back to its initial values so that the first channel is always selected whenever you select a server.<code><pre>
 useEffect(() => {
-setActiveChannel({
-  ...activeChannel,
-  activeObject: activeChannel.objects[index],
-  objects: articles,
-})
+  setActiveChannel({
+    ...activeChannel,
+    activeObject: activeChannel.objects[index],
+    objects: articles,
+  })
 }, [articles])</pre></code>
       Well for some reason state wouldn't get initialized back to its default values, causing all sorts of problems with selecting a channel. After hours of staring at my screen and dozens of console logs, I finally realized it's because I set the wrong value in the useEffect hook. Instead of setting it back to the default values, I was using the previously stored values in state, and simply reassigning state to the previous values. Here's what it should be: <code><pre>
 useEffect(() => {
-setActiveChannel({
-  ...activeChannel,
-  activeObject: articles[0],
-  objects: articles,
+  setActiveChannel({
+    ...activeChannel,
+    activeObject: articles[0],
+    objects: articles,
 })
 }, [articles])</pre></code><span class="edited"></span>`,
       "It's actually embarrassing how I didn't catch it from the beginning, but now that I have it functioning properly, I can finally finish this website and publish it!",
@@ -169,6 +168,20 @@ setActiveChannel({
       `I added a default message that explains to the user that the backend might take a bit of time, and I also added a tooltip for when you hover over the home or blog "server". I'm gonna try to focus on starting a new project, which will probably not be as complex as this one, but something cool and challenging. No idea what it will be, but I'll figure it out.`,
     ],
     date: "March 15, 2022",
+    section: 'blog',
+  },
+  {
+    id: 12,
+    title: "my next project",
+    body: [
+      `Over the past week I started working on a weather app that's entirely done in React, using <a href="www.weatherapi.com">weatherapi</a> for the information. There are multiple themes based on the time of day (sunrise, mid day, sunset, and midnight) based on the location that was searched for. Here's the <a href="https://euphonious-gaufre-097898.netlify.app/">live website</a> and here's the <a href="https://github.com/coltonleach/weather-app">GitHub repo</a>, and here is the <a href="https://www.figma.com/file/leb24xh8RSJkPglrKcnKyL/Untitled?node-id=0%3A1">Figma project files</a>.`,
+      `That was a lot of fun to work on, coming up with the different themes and figuring out how to display each theme based on the location's time. The project probably took me 21-28 hours from start to finish, working on it for 3-4 hours a day for a week, and I love how it turned out. I was hoping to have some allergy information, but I wasn't able to find a free api that supported geo-coding, and I gave myself a hard deadline of seven days to finish this.`,
+      `I think the hardest part was coming up with the design, which took 3 days. Then it took me 4 days to implement everything, and the last day was just coming up with a loading animation then publishing the project.`,
+      `I definitely learned a lot on this project, and ran into some funny little moments with the way I was setting up the logic. I definitely recommend checking out the history of the App.js file if you want a good laugh. Especially this <a href="https://github.com/coltonleach/weather-app/commit/284e56d94c92a830eb7fe01442d66f6105d56f76">push right here</a>. That mess of code got condensed quite a bit once I got some sleep. I also learned about "Mixed content", and I had a mini heart attack when I ran into that problem.`,
+      `Since my site is https, and the api url I was calling was http (without an S), the browser was blocking the request. I was freaking out because I thought Netlify was having problems and that I'd have to find a different provider. Well after a quick googling, I found out all I need to do was change my api address to "https" and I should be fine, and thankfully it worked. I saw another thread where someone said the api they were working with didn't offer https, so they had to find a different service and refactor their project. Poor guy.`,
+      `Anyway, I'm currently working on a React Native project and I'm super excited for it. Not gonna give any spoilers quite yet until I get something tangible, cause I might be pretty busy with some work stuff soon and I don't want to jinx myself. I'll definitely keey y'all updated, though.`
+    ],
+    date: "March 27, 2022",
     section: 'blog',
   },
 ]
