@@ -174,7 +174,7 @@ useEffect(() => {
     id: 12,
     title: "my next project",
     body: [
-      `Over the past week I started working on a weather app that's entirely done in React, using <a class="hypertext" href="http://www.weatherapi.com">weatherapi</a> for the information. There are multiple themes based on the time of day (sunrise, mid day, sunset, and midnight) based on the location that was searched for. Here's the <a class="hypertext" href="https://euphonious-gaufre-097898.netlify.app/">live website</a> and here's the <a class="hypertext" href="https://github.com/coltonleach/weather-app">GitHub repo</a>, and here is the <a class="hypertext" href="https://www.figma.com/file/leb24xh8RSJkPglrKcnKyL/Untitled?node-id=0%3A1">Figma project files</a>.`,
+      `Over the past week I started working on a weather app that's entirely done in React, using <a class="hypertext" href="http://www.weatherapi.com">weatherapi</a> for the information. There are multiple themes based on the time of day (sunrise, mid day, sunset, and midnight) based on the location that was searched for. Here's the <a class="hypertext" href="https://clweatherapp.netlify.app/">live website</a> and here's the <a class="hypertext" href="https://github.com/coltonleach/weather-app">GitHub repo</a>, and here is the <a class="hypertext" href="https://www.figma.com/file/leb24xh8RSJkPglrKcnKyL/Untitled?node-id=0%3A1">Figma project files</a>.`,
       `That was a lot of fun to work on, coming up with the different themes and figuring out how to display each theme based on the location's time. The project probably took me 21-28 hours from start to finish, working on it for 3-4 hours a day for a week, and I love how it turned out. I was hoping to have some allergy information, but I wasn't able to find a free api that supported geo-coding, and I gave myself a hard deadline of seven days to finish this.`,
       `I think the hardest part was coming up with the design, which took 3 days. Then it took me 4 days to implement everything, and the last day was just coming up with a loading animation then publishing the project.`,
       `I definitely learned a lot on this project, and ran into some funny little moments with the way I was setting up the logic. I definitely recommend checking out the history of the App.js file if you want a good laugh. Especially this <a class="hypertext" href="https://github.com/coltonleach/weather-app/commit/284e56d94c92a830eb7fe01442d66f6105d56f76">push right here</a>. That mess of code got condensed quite a bit once I got some sleep. I also learned about "Mixed content", and I had a mini heart attack when I ran into that problem.`,
@@ -197,6 +197,20 @@ useEffect(() => {
       `Turns out I was over thinking it and once it clicked in my head, I got the ball rolling in no time. I got the Firestore stuff working in about 4 hours, and now my sandbox app is almost complete. The only things left to do is properly sit down and learn the useContext hook so I don't have to do some funky state/prop management and then I'll be all set to work on the React Native app again.`
     ],
     date: "April 21, 2022",
+    section: 'blog'
+  },
+  {
+    id: 14,
+    title: "i made a proper portfolio",
+    body: [
+      `I've always wanted to make a proper portfolio website, but for some reason just couldn't bring myself to do it. I always thought the design would eventually just come to mind and I would throw it together quickly, but it never really did. Four days ago I said screw it, I'm going to make one from scratch and actually work through it.`,
+      `I went to Dribbble to look for some inspiration and found a ton. I then studied pretty much from sunrise to sunset, what I liked and what I didn't like about the stuff I saw. I opened up a Figma, threw some stuff together for a day and just didn't like almost anything I was coming up with. On the second day, and a fresh pair of eyes, I ended up with a break through and really liked what I came up with. I spent the rest of the day finishing up the design, got about 90% of the way there then took a break for the day.`,
+      `Yesterday is when I started the markup and styling, and I managed to finish the page the same day. I feel like I came up with some creative solutions to a few things, noteably the circle with a cutout of me in it. I just used an ::after pseudo element to put me in front of the circle with overflow set to hidden, but the cool part was setting it's width and height to the viewport width to make it semi-responsive without having to use breakpoints.`,
+      `Overall, I'm incredibly happy with the current result. I'm thinking of adding some fun SVG backgrounds to some of the sections, but I'm gonna learn from my past mistakes and pace myself, as it's not a priority.`,
+      `People have been asking about the React Native app and how it's going. While I have made tremendous progress, I decided to put it on the back burner for now. I've ran into a problem that isn't necessarily difficult to fix, it's just that I don't understand <i>how</i> it works specifically. So right now I'm tied between continuing on with FullStackOpen, or give NextJS a shot.`,
+      `I've enjoyed the FSO course a lot, but took a break from it to work on the React Native app and have realized I'll need to start over a decent chunk of the course because it has been a few months. I've seen a lot of stuff about NextJS lately and have a growing interest in trying it out, but I feel that FSO will ultimately be the more secure route to go down. The more I type this out, the more I believe I should just stick with FSO. Maybe I'll just ask Siri to flip a coin.`
+    ],
+    date: "June 13, 2022",
     section: 'blog'
   }
 ]
