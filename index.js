@@ -235,10 +235,22 @@ useEffect(() => {
     body: [
       `In my last article, I mentioned that I wanted to create an additional mock website and utilize some of the cool stuff I've learned. Instead of a mock website, I decided to make a new portfolio site 😅. I love my current one for a <i>lite</i> design, but I got something brewing and it's looking awesome so far.`,
       `I finished the intro/hero section and part of the 'my work' section (which took a good while to figure out), but now I'm taking a small break to polish up my chat app. I'll start posting blogs whenever I get back to working on the portfolio app, because I have already learned a few additional tricks that would be great to document, so I'm sure I'll find some more stuff to ramble about.`,
-      `As for this chat app, when I finished the main functionality, I took a break from it to focus on some other stuff and I originally thought that the list of stuff I needed to work on was going to be difficult, but so far I'm chopping the list down steadily. I started working on it this morning around 8am, and it's 11:23am now and I've already fixed 5 things on my list. Granted, they were the easiest ones, but hey, the little wins count too.`,
+      `As for this chat app, back when I finished the main functionality, I took a break from it to focus on some other stuff and I originally thought that the list of stuff I needed to work on was going to be difficult, but so far I'm chopping the list down steadily. I started working on it this morning around 8am, and it's 11:23am now and I've already fixed 5 things on my list. Granted, they were the easiest ones, but hey, the little wins count too.`,
       `Also, setting up Cyclic for the backend of this blog was incredibly simple. I just created an account, setup a repo on Github for my backend, linked it to Cyclic and I was done. Definitely recommend it!`,
     ],
     date: 'November 19, 2022',
+    section: 'blog',
+  },
+  {
+    id: 16,
+    title: 'focusing on a previous project',
+    body: [
+      `With the chat app, I ran into a tiny, yet huge security vulnerability. Whenever a user selects a chat, logs out, then logs into a different account, that previous chat log is still there. I'm speculating that it's because one of the components isn't unmounting properly, because the return on the useEffect doesn't seem to be executing. So for now, I'm going to take a break from the chat app while I do some research while working on a different project.`,
+      `I decided to pick up my Kanban/notes app I had going back in July, and man it's always funny looking at an old project you haven't touched in a while. It's like a completely different language, and it took me a little bit of time to remember what all is going on. Kind of makes me wonder if this is parallel to getting on a new dev team and having to learn their codebase.`,
+      `Anyway, right now it's using plain React, but I'm thinking of taking this opportunity to learn Next.JS. So far I've refactored the styles, a bit of the components, and organized the file structure a bit better. I also added a json-server for testing purposes, as I plan on using MongoDB Atlas for the database. I do want to learn to setup an SQL database because of Prisma (I know that Prisma works for Mongo, but from the little research I've done, it seems like SQL just makes more sense with Prisma), but maybe instead of that I could use Supabase since this needs user auth anyway.`,
+      `I'm not sure what direction I want to go down, though, as I don't want to flood myself with too much <i>new</i> tech to mitigate "scope creep". With all that being said, no matter what direction I head, it will definitely be worth it as I think it would be great for me to learn any of the previously listed tech. For now, I'm going to prioritize making the primary functionality work and then figure what direction to head.`,
+    ],
+    date: 'November 27, 2022',
     section: 'blog',
   },
 ]
