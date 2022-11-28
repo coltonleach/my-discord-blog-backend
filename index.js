@@ -230,7 +230,7 @@ useEffect(() => {
     section: 'blog',
   },
   {
-    id: 15,
+    id: 16,
     title: 'small change of plans',
     body: [
       `In my last article, I mentioned that I wanted to create an additional mock website and utilize some of the cool stuff I've learned. Instead of a mock website, I decided to make a new portfolio site 😅. I love my current one for a <i>lite</i> design, but I got something brewing and it's looking awesome so far.`,
@@ -242,7 +242,7 @@ useEffect(() => {
     section: 'blog',
   },
   {
-    id: 16,
+    id: 17,
     title: 'focusing on a previous project',
     body: [
       `With the chat app, I ran into a tiny, yet huge security vulnerability. Whenever a user selects a chat, logs out, then logs into a different account, that previous chat log is still there. I'm speculating that it's because one of the components isn't unmounting properly, because the return on the useEffect doesn't seem to be executing. So for now, I'm going to take a break from the chat app while I do some research while working on a different project.`,
@@ -254,7 +254,7 @@ useEffect(() => {
     section: 'blog',
   },
   {
-    id: 17,
+    id: 18,
     title: '2023 resolutions',
     body: [
       `I like the progress that I have made in 2022, but I feel like it could've been better if I structured out what I want to learn and focused on the end goal. I just kind of went with the flow and did whatever I found interesting, (which there's nothing wrong with that approach!) and I managed to learn a good bit.`,
