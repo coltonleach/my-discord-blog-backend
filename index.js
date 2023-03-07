@@ -270,6 +270,20 @@ useEffect(() => {
     date: 'November 27, 2022',
     section: 'home',
   },
+  {
+    id: 19,
+    title: 'first post of the year 🎉',
+    body: [
+      `Hello neighbor, hope you're doing well!`,
+      `To kick start the year, I got carried away with Escape from Tarkov and kind of stopped working on projects for a bit. But thankfully, I have lost practically all interest in Tarkov, so it's back to the grind.`,
+      `I decided to finish up my newest portfolio design that I started working on back in November. I think it turned out great, and I like that it's got some fun creative aspects while being decently simple and to the point.`,
+      `Last week, a friend of mine came to me with a project idea that I really took to. He's focusing on the backend while I focus on the frontend. I came up with a decent little design and went to work. It gave me my first glimpse into refactoring an existing application, and boy it was something.`,
+      `The framework we're using is Vue, which I have literally no experience in. I was genuinely taken back by how much effort goes into just learning the codebase and trying to understand the flow of it all. The organization, file structure, and pretty much everything went against what I know and love, so it's definitely gonna take some time to adjust.`,
+      `Ultimately it's been really cool working on it, and I'm excited to see it through. I can't spoil anything as it's not my project, but maybe at some point we'll make it public.`,
+    ],
+    date: 'March 7, 2023',
+    section: 'blog',
+  },
 ]
 
 app.get('/api/articles', (req, res) => {
