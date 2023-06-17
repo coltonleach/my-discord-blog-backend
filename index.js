@@ -4,11 +4,6 @@ const app = express()
 
 app.use(cors())
 const requestLogger = (req, res, next) => {
-  console.log('----REQUEST LOGGER----')
-  console.log('Method: ', req.method)
-  console.log('Path: ', req.path)
-  console.log('Body: ', req.body)
-  console.log('-------')
   next()
 }
 
