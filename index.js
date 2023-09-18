@@ -307,6 +307,20 @@ useEffect(() => {
     date: 'July 15, 2023',
     section: 'blog',
   },
+  {
+    id: 22,
+    title: 'launched my first public web app',
+    body: [
+      `This was a weird one. This pretty much goes against almost everything I listed in my 2023 resolutions post. First, let me talk about this app!`,
+      `Back in late March, I posted "my next project" that explained that I was going to start working on a React Native project (dog park check in). In mid April, I posted an update that explained my progress and how excited I was with learning React Native and Firebase. While all of that was accurate, I quickly hit a wall afterwards. I'm not gonna go into much detail, but basically I put the project on the backburner because React Native was annoying to develop on without an iPhone 🥴.`,
+      `Well all of a sudden, just about two months ago, it dawned on me: I don't need to make a native mobile app right now, I can just make a mobile website! So I got to work. I originally decided to make it a NextJS/TS application because Next13 just released and man... That was rough. I greatly dislike the page handler. The DX was just awful. Why does the route's index have to be called "page"? Do you have any idea how annoying it is navigating between pages that way? Anyway, after some more time, my apartment complex decided to spawn another dog park without any heads up. I was at the original one when a friend showed up and told me there's a new one. So I realized that I <b>really</b> need to get this app off the ground.`,
+      `I decided to make a "lite" version of the idea. Not necessary an MVP, but one specifically, and exclusively only for my apartment complex. This will allow me to get people I know to test it, get some authentic responses and suggestions, and keep the user base small while I iron out all of the features. Things have gone incredibly well! Everyone seems to be enjoying the web app, and I've had a blast developing it!`,
+      `Back to what I mentioned in the first message: the reason why I say it goes against almost everything I listed in the resolutions is because I dropped NextJS, I dropped Typescript, and I just have no interest in Prisma. While I think NextJS is cool, I don't think it's very practical for the apps that I'm working on. I got some good experience with it, but ultimately I felt like I was making worse design decisions in my development. The development approach is definitely a different beast compared to <i>just</i> ReactJS. Hell, ReactJS is much more different than vanilla JS, which I guess is part of the reason to use these ever-growing libraries and frameworks. With TypeScript, while type safety is obviously a good thing, I feel that TS is just awkward. Specifically in React. And Prisma, well.. I just haven't had a reason to use it literally at all.`,
+      `With all of that being said, I at least hit my mark on understanding useContext and useEffect much better! useContext is crazy powerful, and I'm very happy with how far I've come with both of these hooks. I also feel like I have a better understanding on how user authentication works, specifically regarding Firebase + useContext. Lastly, while I don't really care for backend development, I am quite happy with how well I've held up to using Firebase and setting up the logic. I showed it to a backend dev friend and he was not happy with it, but oh well 😁. The good thing with this private app is: 1) I'm using it as a learning opportunity and constantly making improvements to the backend, and 2) the frontend will not have to change at all if I decide to scale this up to the original idea.`,
+    ],
+    date: 'Sept 18, 2023',
+    section: 'blog',
+  },
 ]
 
 app.get('/api/articles', (req, res) => {
